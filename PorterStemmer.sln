@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PorterStemmer", "PorterStemmer\PorterStemmer.fsproj", "{2E26B8D0-0D58-47CA-903E-3C7115077DB3}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PorterStemmer.Tests", "PorterStemmer.Tests\PorterStemmer.Tests.fsproj", "{B6457C51-D19F-4F38-96BB-CEA6FC84CB91}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E26B8D0-0D58-47CA-903E-3C7115077DB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E26B8D0-0D58-47CA-903E-3C7115077DB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E26B8D0-0D58-47CA-903E-3C7115077DB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E26B8D0-0D58-47CA-903E-3C7115077DB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6457C51-D19F-4F38-96BB-CEA6FC84CB91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6457C51-D19F-4F38-96BB-CEA6FC84CB91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6457C51-D19F-4F38-96BB-CEA6FC84CB91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6457C51-D19F-4F38-96BB-CEA6FC84CB91}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
