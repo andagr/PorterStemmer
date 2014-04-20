@@ -36,7 +36,7 @@ module Stemmer =
         | V::C::t -> (measurement t) + 1
         | h::t -> measurement t
 
-    /// The stem ends with e.g. "s" or any letter/word. (*S in Porter algorithm description.)
+    /// The stem ends with e.g. "s" or any letter/word. (*S in the Porter algorithm description.)
     let private (|Ends|_|) (s:string list) (word:string) =
         match List.tryFind (fun s -> word.EndsWith(s)) s with
         | Some s -> Some ((word.Substring(0, String.length word - String.length s)), s)
@@ -47,21 +47,21 @@ module Stemmer =
         | Ends s _ -> true
         | _ -> false
 
-    /// The stem ends with a double -and equal- consonant. (*d in Porter algorithm description.)
+    /// The stem ends with a double -and equal- consonant. (*d in the Porter algorithm description.)
     let private (|EndsDoubleC|_|) trunk =
         match trunk |> kinds |> List.rev with
         | C::C::_ when trunk.[String.length trunk - 2] = trunk.[String.length trunk - 1] -> Some ((trunk.Substring(0, String.length trunk - 2)), (trunk.Substring(String.length trunk - 2, 2)))
         | _ -> None
 
-    /// Calculates the measurement of a stem. (m in Porter algorithm description.)
+    /// Calculates the measurement of a stem. (m in the Porter algorithm description.)
     let private m  =
         kinds >> pack >> measurement
 
-    /// The stem contains a vowel. (*v* in Porter algorithm description.)
+    /// The stem contains a vowel. (*v* in the Porter algorithm description.)
     let private hasVowel trunk =
         trunk |> kinds |> List.exists (fun k -> k = V)
 
-    /// The word ends in CVC, where the second C (i.e. the last character) is not w, x or y. (*o in Porter algorithm description.)
+    /// The word ends in CVC, where the second C (i.e. the last character) is not w, x or y. (*o in the Porter algorithm description.)
     let private (|EndsCVCNotWXY|_|) word =
         match word with
         | Ends ["w"; "x"; "y"] _ -> None
